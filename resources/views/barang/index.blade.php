@@ -166,6 +166,7 @@
             //jika tambah-barang diklik maka
             $('#tambah-barang').click(function () {
                 $('#tombol-simpan').val("create-post"); //valuenya menjadi create-post
+                $('#generate').show();
                 $('#id').val(''); //valuenya menjadi kosong
                 $('#form-tambah-edit').trigger("reset"); //mereset semua input dll didalamnya
                 $('#modal-judul').html("Tambah Barang"); //valuenya tambah barang baru
@@ -278,6 +279,7 @@
                         success ')}}',
                         position: 'bottomRight'
                     });
+                    $('#generate').show();
                         
                 },
                 error: function(data){

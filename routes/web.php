@@ -17,5 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::resource('/barang','BarangController', ['names' => 'barang']);
-// Route::post('/barang/generate', 'BarangController@generateKode')->name('generate');
+Route::resource('/barang','BarangController', ['names' => 'barang'])->except([
+    'create', 'show', 'update'
+]);
+

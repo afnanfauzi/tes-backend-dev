@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::resource('/barang','BarangController', ['names' => 'barang']);
+// Route::post('/barang/generate', 'BarangController@generateKode')->name('generate');

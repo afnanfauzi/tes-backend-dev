@@ -283,7 +283,13 @@
                         
                 },
                 error: function(data){
-                    $('#response').show().html("Format atau ukuran foto tidak sesuai."); 
+                    var json = JSON.stringify(data);
+                    var conv = JSON.parse(json);
+                    var isi = Object.values(conv);
+                    // console.log(isi[2]["data"]["file"][0]);
+                    var error = (isi[2]["data"]["file"][0]);
+                    console.log(error); 
+                    $('#response').show().html(error); 
                     $('#tombol-simpan').html('Simpan');
                 }
                 });
